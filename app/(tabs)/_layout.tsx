@@ -5,7 +5,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { FontAwesome } from '@expo/vector-icons';
 
 
-const tabroot = () => {
+const TabRoot = () => {
   return (
     <Tabs screenOptions={{
       tabBarActiveTintColor: 'rgb(202, 5, 103)',
@@ -30,7 +30,11 @@ const tabroot = () => {
           tabBarIcon: ({ color, focused }) => (
             <FontAwesome size={24} name='user-circle-o' color={color}/>)
         }}/>
+        <Tabs.Screen name='fir'options={{title : "E-Fir", 
+          tabBarIcon: ({ color, focused }) => (
+            <FontAwesome size={24} name='user-circle-o' color={color}/>)
+        }}/>
     </Tabs>
   )
 }
-export default tabroot;
+export default TabRoot;
