@@ -2,11 +2,13 @@ import React from "react";
 import {Text,TouchableOpacity,View} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NavigationProp } from '@react-navigation/native';
-import Emergency from '../emergency';
+import Emergency from './Screens/emergency';
 import { createStackNavigator } from '@react-navigation/stack';
 
 type RootStackParamList = {
   emergency: undefined;
+  SearchOfficer: undefined;
+  NearbyPoliceStation: undefined;
   // ... other screens
 };
 
@@ -19,6 +21,32 @@ const index = ( ) => {
         alignItems: "center",
       }}>
         <Text>hi i am dhruv</Text>
+
+        <TouchableOpacity 
+          style={{
+            backgroundColor: 'blue',
+            padding: 20,
+            borderRadius: 50,
+            marginTop: 20,
+          }}
+          onPress={() => { navigation.navigate("SearchOfficer");}}>
+          <Text style={{ color: 'white', fontWeight: 'bold' }}>
+            Search Officer
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={{
+            backgroundColor: 'green',
+            padding: 20,
+            borderRadius: 50,
+            marginTop: 20,
+          }}
+          onPress={() => { navigation.navigate("NearbyPoliceStation"); }}>
+          <Text style={{ color: 'white', fontWeight: 'bold' }}>
+            Nearby Police Station
+          </Text>
+        </TouchableOpacity>
 
         <TouchableOpacity 
           style={{
