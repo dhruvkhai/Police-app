@@ -21,7 +21,7 @@ const Onboarding = () => {
         pages={[
           {
             backgroundColor: '#fff',
-            image: <Image source={require('../assets/images/logo.png')} style={styles.logo} />,
+            image: <Image source={require('./logo.png')} style={styles.logo} />,
             title: 'Welcome',
             subtitle: 'Log in to continue',
           },
@@ -68,7 +68,7 @@ const Onboarding = () => {
             image: (
               <View>
                 <Image
-                  source={require('../assets/images/G-singin.png')}
+                  source={require('./G-singin.png')}
                   style={styles.icon}
                 />
                 <TouchableOpacity
