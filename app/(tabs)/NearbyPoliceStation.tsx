@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const AllPoliceStation = () => {
+const NearbyPoliceStation = () => {
   return (
     <View>
-      <Text>AllPoliceStation</Text>
+      <Text>NearbyPoliceStation</Text>
     </View>
   )
 }
 
-export default AllPoliceStation
+export default NearbyPoliceStation
