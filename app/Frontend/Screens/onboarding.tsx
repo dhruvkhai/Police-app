@@ -27,7 +27,7 @@ const Onboarding = () => {
           },
           {
             backgroundColor: '#fff',
-            title: 'Register',
+            title: 'Login',
             subtitle: 'continue',
             titleStyles: { color: '#000' },
             subTitleStyles: { color: '#000' },
@@ -52,7 +52,7 @@ const Onboarding = () => {
                 </TouchableOpacity>
                 <View style={styles.bottomContainer}>
                   <Text style={styles.bottomText}>Don't have an account? </Text>
-                  <TouchableOpacity onPress={() => navigation.navigate('signup' as never)}>
+                  <TouchableOpacity onPress={() => navigation.navigate('Register' as never)}>
                     <Text style={styles.registerLink}>Register</Text>
                   </TouchableOpacity>
                 </View>
@@ -61,22 +61,31 @@ const Onboarding = () => {
           },
           {
             backgroundColor: '#fff',
-            title: 'Login',
+            title: 'Register',
             subtitle: 'continue',
             titleStyles: { color: '#000' },
             subTitleStyles: { color: '#000' },
             image: (
-              <View>
-                <Image
-                  source={require('./G-singin.png')}
-                  style={styles.icon}
-                />
-                <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => navigation.navigate('(tabs)' as never)}>
-                  <Text style={styles.text}>Continue</Text>
-                </TouchableOpacity>
-              </View>
+              <View style={styles.container}>
+      <Text style={styles.Rtitle}>Register</Text>
+
+      <TextInput placeholder="Name" style={styles.Rinput} />
+      <TextInput placeholder="E-mail" style={styles.Rinput} keyboardType="email-address" />
+      <TextInput placeholder="Gender" style={styles.Rinput} />
+      <TextInput placeholder="Mobile No." style={styles.Rinput} keyboardType="phone-pad" />
+      <TextInput placeholder="Password" style={styles.Rinput} secureTextEntry={true} />
+      <TextInput placeholder="Aadhar Card No." style={styles.Rinput} keyboardType="numeric" />
+      <TextInput placeholder="Confirm Password" style={styles.Rinput} secureTextEntry={true} />
+
+      <TouchableOpacity style={styles.registerButton}>
+        <Text style={styles.registerButtonText}>REGISTER</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+        <Text style={styles.loginText}>Already Member? Login</Text>
+      </TouchableOpacity>
+    </View>
+    
             )
           }
         ]}
@@ -175,5 +184,42 @@ const styles = StyleSheet.create({
     color: '#757575',
     fontSize: 16,
     fontWeight: '500',
+  },
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
+  Rtitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  Rinput: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 15,
+    fontSize: 16,
+  },
+  registerButton: {
+    backgroundColor: '#007BFF',
+    padding: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  registerButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  loginText: {
+    textAlign: 'center',
+    marginTop: 15,
+    color: '#007BFF',
+    fontSize: 16,
   },
 });

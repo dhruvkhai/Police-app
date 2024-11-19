@@ -25,15 +25,7 @@ const TabRoot = () => {
               <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
             ),
             }}/>
-          <Tabs.Screen name='about'options={{title : "About us",
-          tabBarIcon: ({ color, focused }) => (
-              <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24}/>
-            ),
-            }}/>
-          <Tabs.Screen name='profile'options={{title : "Profile ", 
-            tabBarIcon: ({ color }) => (
-              <FontAwesome size={24} name='user-circle-o' color={color}/>)
-          }}/>
+          
           <Tabs.Screen name='fir'options={{title : "E-Fir", 
             tabBarIcon: ({ color }) => (
               <FontAwesome size={24} name='user-circle-o' color={color}/>)
